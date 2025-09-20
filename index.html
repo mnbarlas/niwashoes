@@ -23,9 +23,18 @@
     text-align: center;
     flex-direction: column;
   }
-  .banner h1 { font-size: 2rem; margin: 0; }
-  .banner p { font-size: 1.2rem; margin: 0; }
+ /* .banner h1 { font-size: 2rem; margin: 0; }
+  .banner p { font-size: 1.2rem; margin: 0; } */
+ 
+   .banner h1, .banner p {
+  position: relative;
+  z-index: 1;
+  color: #ffffff; /* fill color */
+  -webkit-text-stroke: 1.5px #3498db; /* outline color and width */
+  text-align: center;
+}
 
+  
   .language-selector{text-align:right;margin-bottom:15px;}
   select{padding:5px 8px;}
   header{text-align:center;margin-bottom:25px;}
@@ -280,6 +289,7 @@
 </script>
 </body>
 </html>
+
 
 
 
