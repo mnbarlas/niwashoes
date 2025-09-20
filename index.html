@@ -51,17 +51,82 @@
     .banner h1{font-size:1.5rem;}
     .banner p{font-size:1rem;}
   }
+
+
+.banner-wrapper {
+  width: 100%;
+  height: 60%; /* banner height reduced */
+  margin-bottom: 20px;
+  border: 2px solid #3498db; /* blue border */
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+}
+
+.banner {
+  width: 100%;
+  height: 100%;
+  background: url('https://raw.githubusercontent.com/mnbarlas/niwashoes/refs/heads/main/Banner.png') center/cover no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #2c3e50; /* changed text color for contrast */
+  text-shadow: 1px 1px 4px rgba(255,255,255,0.8); /* optional text shadow */
+  padding: 10px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
 </style>
 </head>
 <body>
 <div class="container">
 
-  <!-- Banner -->
+  <!-- Banner 
+  <div class="banner">
+    <h1 data-i18n="company_name">Niwa Shoes Co., Ltd.</h1>
+    <p data-i18n="proposal_title">Business Sales Proposal – September 2025</p>
+  </div>  -->
+
+<!-- Banner with 60% height and border -->
+<div class="banner-wrapper">
   <div class="banner">
     <h1 data-i18n="company_name">Niwa Shoes Co., Ltd.</h1>
     <p data-i18n="proposal_title">Business Sales Proposal – September 2025</p>
   </div>
+</div>
 
+
+
+
+
+
+
+
+
+
+  
   <!-- Language selector -->
   <div class="language-selector">
     <label for="lang">Language:</label>
@@ -216,3 +281,4 @@
 </script>
 </body>
 </html>
+
