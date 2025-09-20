@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Niwa Shoes Co., Ltd. – Business Sales Proposal</title>
+  <style>
+    /* ===== Reset & Base ===== */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: "Segoe UI", Tahoma, sans-serif;
+      line-height: 1.6;
+      background: #f4f6f8;
+      color: #2c3e50;
+      padding: 20px;
+    }
+    h1, h2, h3 {
+      color: #154360;
+      margin-bottom: .5rem;
+    }
+    h1 { font-size: 2rem; }
+    h2 { font-size: 1.5rem; border-bottom: 2px solid #3498db; padding-bottom: .3rem; }
+    h3 { font-size: 1.2rem; margin-top: 1rem; }
+
+    p, ul, li { font-size: 1rem; color: #333; }
+    a { color: #2980b9; text-decoration: none; }
+
+    /* ===== Layout ===== */
+    .container {
+      max-width: 1020px;
+      margin: auto;
+      background: #fff;
+      padding: 30px;
+      border-radius: 14px;
+      box-shadow: 0 6px 14px rgba(0,0,0,0.1);
+    }
+
+    header {
+      text-align: center;
+      padding-bottom: 20px;
+      border-bottom: 4px solid #3498db;
+      margin-bottom: 25px;
+    }
+    header h1 { font-size: 2.4rem; color: #0b3c5d; }
+    header p { font-size: 1.1rem; color: #555; }
+
+    section { margin-bottom: 2.5rem; }
+
+    /* ===== Two Column Layout ===== */
+    .two-col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      margin-top: 1rem;
+    }
+
+    /* ===== Key Metrics ===== */
+    .key-metrics {
+      display: flex;
+      gap: 20px;
+      margin-top: 1rem;
+      flex-wrap: wrap;
+    }
+    .metric {
+      flex: 1;
+      min-width: 180px;
+      background: linear-gradient(145deg, #eaf2f8, #d6eaf8);
+      border-radius: 12px;
+      padding: 18px;
+      text-align: center;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+    }
+    .metric h3 { margin: 0; color: #1f618d; font-size: 1.2rem; }
+    .metric p { font-size: 1.1rem; font-weight: bold; color: #21618c; }
+
+    /* ===== Tables ===== */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 1rem;
+    }
+    table th, table td {
+      border: 1px solid #ddd;
+      padding: 10px 12px;
+      text-align: left;
+    }
+    table th {
+      background: #3498db;
+      color: #fff;
+    }
+    table tr:nth-child(even) { background: #f9f9f9; }
+
+    /* ===== Gallery ===== */
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 15px;
+      margin-top: 1rem;
+    }
+    .gallery img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 12px;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+    }
+    .gallery img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 6px 16px rgba(0,0,0,0.25);
+    }
+
+    /* ===== Lightbox ===== */
+    .lightbox {
+      position: fixed;
+      top:0; left:0; right:0; bottom:0;
+      background: rgba(0,0,0,0.85);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 1000;
+    }
+    .lightbox img {
+      max-width: 90%;
+      max-height: 90%;
+      border-radius: 10px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.4);
+    }
+
+    /* ===== Closing & Contact ===== */
+    .contact-box {
+      background: #eaf2f8;
+      padding: 20px;
+      border-radius: 12px;
+      margin-top: 1.5rem;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    .contact-box h3 { margin-top: 0; }
+    .contact-box p { margin-bottom: .5rem; }
+
+    /* ===== Responsive ===== */
+    @media (max-width:768px) {
+      .two-col { grid-template-columns: 1fr; }
+      .key-metrics { flex-direction: column; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Header -->
+    <header>
+      <h1>Niwa Shoes Co., Ltd.</h1>
+      <p>Business Sales Proposal – September 2025</p>
+    </header>
+
+    <!-- Company Overview -->
+    <section>
+      <h2>Company Overview</h2>
+      <p>
+        Niwa Shoes Co., Ltd. is a mid-sized footwear company specializing in wholesale and retail distribution across Thailand. 
+        With a strong reputation for quality and affordability, Niwa Shoes has successfully built a hybrid retail + e-commerce model, 
+        offering nationwide reach and a loyal customer base.
+      </p>
+      <div class="two-col">
+        <div>
+          <h3>Highlights</h3>
+          <ul>
+            <li>10+ years in footwear business</li>
+            <li>Wholesale + retail + online sales channels</li>
+            <li>Consistent customer base with repeat orders</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Ownership</h3>
+          <p>Privately owned, now open for acquisition to scale further in Thailand and Southeast Asia.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Financial Snapshot -->
+    <section>
+      <h2>Financial Snapshot</h2>
+      <div class="key-metrics">
+        <div class="metric"><h3>Revenue</h3><p>THB 2,000,000 / Month</p></div>
+        <div class="metric"><h3>Net Profit</h3><p>THB 300,000+ / Month</p></div>
+        <div class="metric"><h3>Major Expenses</h3><p>Rent, Staff, Marketing</p></div>
+      </div>
+      <table>
+        <thead>
+          <tr><th>Category</th><th>Monthly Avg</th><th>Notes</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Revenue</td><td>THB 2,000,000</td><td>Steady past 12 months</td></tr>
+          <tr><td>Net Profit</td><td>THB 300,000+</td><td>After tax</td></tr>
+          <tr><td>Expenses</td><td>Variable</td><td>Mainly rent, salaries, marketing</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Market Position -->
+    <section>
+      <h2>Market Position</h2>
+      <p>
+        Niwa Shoes serves both retail and wholesale clients, positioning itself as a trusted mid-market footwear provider.
+        With distribution partnerships and online channels, it remains resilient against market volatility.
+      </p>
+    </section>
+
+    <!-- Product Gallery -->
+    <section>
+      <h2>Product Gallery</h2>
+      <div class="gallery">
+        <img src="shoe1.jpg" alt="NIWA Shoe 1">
+        <img src="shoe2.jpg" alt="NIWA Shoe 2">
+        <img src="shoe3.jpg" alt="NIWA Shoe 3">
+        <img src="shoe4.jpg" alt="NIWA Shoe 4">
+        <img src="shoe5.jpg" alt="NIWA Shoe 5">
+        <img src="shoe6.jpg" alt="NIWA Shoe 6">
+        <img src="shoe7.jpg" alt="NIWA Shoe 7">
+        <img src="shoe8.jpg" alt="NIWA Shoe 8">
+      </div>
+    </section>
+
+    <!-- Store & Booth Gallery -->
+    <section>
+      <h2>Store & Booth Gallery</h2>
+      <div class="gallery">
+        <img src="store1.jpg" alt="NIWA Store 1">
+        <img src="store2.jpg" alt="NIWA Store 2">
+        <img src="store3.jpg" alt="NIWA Store 3">
+        <img src="store4.jpg" alt="NIWA Store 4">
+      </div>
+    </section>
+
+    <!-- Conclusion -->
+    <section>
+      <h2>Conclusion</h2>
+      <p>
+        Niwa Shoes Co., Ltd. presents a rare opportunity to acquire a stable, profitable, and scalable footwear business 
+        in Thailand. With strong financial performance, established brand reputation, and growth potential, this is an 
+        attractive prospect for both domestic and international investors.
+      </p>
+    </section>
+
+    <!-- Contact Information -->
+    <section class="contact-box">
+      <h3>Contact & Next Steps</h3>
+      <p><strong>Company:</strong> Niwa Shoes Co., Ltd.</p>
+      <p><strong>Email:</strong> info@niwashoeco.com</p>
+      <p><strong>Phone:</strong> +66 2 123 4567</p>
+      <p><strong>Address:</strong> Bangkok, Thailand</p>
+      <p>Interested buyers are encouraged to reach out for further financial due diligence and site visits.</p>
+    </section>
+  </div>
+
+  <!-- Lightbox Script -->
+  <script>
+    document.querySelectorAll('.gallery img').forEach(img => {
+      img.addEventListener('click', () => {
+        const overlay = document.createElement('div');
+        overlay.className = 'lightbox';
+        overlay.innerHTML = `<img src="${img.src}" alt="${img.alt}">`;
+        document.body.appendChild(overlay);
+        overlay.addEventListener('click', () => overlay.remove());
+      });
+    });
+  </script>
+</body>
+</html>
