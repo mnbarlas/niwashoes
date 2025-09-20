@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Niwa Shoes – Business Proposal</title>
+<style>
+body { font-family: 'Segoe UI', sans-serif; background: #f4f6f8; color: #2c3e50; padding: 20px; }
+.container { max-width: 1020px; margin: auto; background: #fff; padding: 30px; border-radius: 14px; box-shadow: 0 6px 14px rgba(0,0,0,0.1); border: 3px solid #3498db; }
+.language-selector { text-align: right; margin-bottom: 15px; }
+select { padding: 5px 8px; border-radius: 6px; border: 1px solid #ccc; }
+header { text-align: center; margin-bottom: 25px; }
+h1,h2,h3 { margin-bottom: 0.5rem; }
+h2 { border-bottom: 2px solid #3498db; padding-bottom: 0.3rem; }
+p,li,td,th { font-size: 1rem; line-height: 1.6; }
+.two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.key-metrics { display: flex; gap: 20px; flex-wrap: wrap; }
+.metric { flex: 1; min-width: 180px; background: #eaf2f8; border-radius: 12px; padding: 18px; text-align: center; border: 2px solid #3498db; box-shadow: 0 3px 6px rgba(0,0,0,0.05); }
+table { width: 100%; border-collapse: collapse; margin-top: 1rem; border: 2px solid #3498db; }
+table th, table td { border: 1px solid #ddd; padding: 10px; }
+table th { background: #3498db; color: #fff; }
+.gallery { display: grid; grid-template-columns: repeat(auto-fill,minmax(200px,1fr)); gap: 15px; margin-top: 1rem; }
+.gallery img { width: 100%; height: 200px; object-fit: cover; border-radius: 12px; cursor: pointer; transition: 0.3s; border: 2px solid #3498db; }
+.gallery img:hover { transform: scale(1.05); border-color: #2c3e50; }
+.lightbox { position: fixed; top:0; left:0; right:0; bottom:0; background: rgba(0,0,0,0.85); display: flex; align-items: center; justify-content: center; z-index: 1000; }
+.lightbox img { max-width: 90%; max-height: 90%; border-radius: 10px; border: 3px solid #fff; }
+.contact-box { background: #eaf2f8; padding: 25px; border-radius: 12px; margin-top: 1.5rem; border: 2px solid #3498db; box-shadow: 0 3px 6px rgba(0,0,0,0.05); }
+@media(max-width:768px){ .two-col{grid-template-columns:1fr;} .key-metrics{flex-direction:column;} }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <div class="language-selector">
+    <label for="lang">Language:</label>
+    <select id="lang">
+      <option value="en">English</option>
+      <option value="th">ไทย</option>
+      <option value="zh">中文</option>
+      <option value="ar">العربية</option>
+      <option value="ru">Русский</option>
+    </select>
+  </div>
+
+  <header>
+    <h1 data-i18n="company_name">Niwa Shoes Co., Ltd.</h1>
+    <p data-i18n="proposal_title">Business Sales Proposal – September 2025</p>
+  </header>
+
+  <section>
+    <h2 data-i18n="company_overview">Company Overview</h2>
+    <p data-i18n="company_desc">Niwa Shoes Co., Ltd. is a mid-sized footwear company...</p>
+    <div class="two-col">
+      <div>
+        <h3 data-i18n="highlights">Highlights</h3>
+        <ul>
+          <li data-i18n="highlight1">10+ years in footwear business</li>
+          <li data-i18n="highlight2">Wholesale + retail + online sales channels</li>
+          <li data-i18n="highlight3">Consistent customer base with repeat orders</li>
+        </ul>
+      </div>
+      <div>
+        <h3 data-i18n="ownership">Ownership</h3>
+        <p data-i18n="ownership_desc">Privately owned, now open for acquisition...</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2 data-i18n="financial_snapshot">Financial Snapshot</h2>
+    <div class="key-metrics">
+      <div class="metric"><h3 data-i18n="revenue_title">Revenue</h3><p data-i18n="revenue_value">THB 2,000,000 / Month</p></div>
+      <div class="metric"><h3 data-i18n="profit_title">Net Profit</h3><p data-i18n="profit_value">THB 300,000+ / Month</p></div>
+      <div class="metric"><h3 data-i18n="expenses_title">Major Expenses</h3><p data-i18n="expenses_value">Rent, Staff, Marketing</p></div>
+    </div>
+    <table>
+      <thead>
+        <tr>
+          <th data-i18n="category">Category</th>
+          <th data-i18n="monthly_avg">Monthly Avg</th>
+          <th data-i18n="notes">Notes</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td data-i18n="revenue_row">Revenue</td>
+          <td>THB 2,000,000</td>
+          <td data-i18n="steady">Steady past 12 months</td>
+        </tr>
+        <tr>
+          <td data-i18n="profit_row">Net Profit</td>
+          <td>THB 300,000+</td>
+          <td data-i18n="after_tax">After tax</td>
+        </tr>
+        <tr>
+          <td data-i18n="expenses_row">Expenses</td>
+          <td>Variable</td>
+          <td data-i18n="main_expenses">Mainly rent, salaries, marketing</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section>
+    <h2 data-i18n="market_position">Market Position</h2>
+    <p data-i18n="market_position_desc">Niwa Shoes serves both retail and wholesale clients...</p>
+  </section>
+
+  <section>
+    <h2 data-i18n="product_gallery">Product Gallery</h2>
+    <div class="gallery">
+      <img src="shoe1.jpg" alt="NIWA Shoe 1">
+      <img src="shoe2.jpg" alt="NIWA Shoe 2">
+      <img src="shoe3.jpg" alt="NIWA Shoe 3">
+      <img src="shoe4.jpg" alt="NIWA Shoe 4">
+      <img src="shoe5.jpg" alt="NIWA Shoe 5">
+      <img src="shoe6.jpg" alt="NIWA Shoe 6">
+      <img src="shoe7.jpg" alt="NIWA Shoe 7">
+      <img src="shoe8.jpg" alt="NIWA Shoe 8">
+    </div>
+  </section>
+
+  <section>
+    <h2 data-i18n="store_gallery">Store & Booth Gallery</h2>
+    <div class="gallery">
+      <img src="store1.jpg" alt="NIWA Store 1">
+      <img src="store2.jpg" alt="NIWA Store 2">
+      <img src="store3.jpg" alt="NIWA Store 3">
+      <img src="store4.jpg" alt="NIWA Store 4">
+    </div>
+  </section>
+
+  <section>
+    <h2 data-i18n="conclusion">Conclusion</h2>
+    <p data-i18n="conclusion_desc">Niwa Shoes Co., Ltd. presents a rare opportunity to acquire...</p>
+  </section>
+
+  <section class="contact-box">
+    <h3 data-i18n="contact">Contact & Next Steps</h3>
+    <p><strong data-i18n="company_label">Company:</strong> <span data-i18n="company_value">Niwa Shoes Co., Ltd.</span></p>
+    <p><strong data-i18n="email_label">Email:</strong> <span data-i18n="email_value">info@niwashoeco.com</span></p>
+    <p><strong data-i18n="phone_label">Phone:</strong> <span data-i18n="phone_value">+66 2 123 4567</span></p>
+    <p><strong data-i18n="address_label">Address:</strong> <span data-i18n="address_value">Bangkok, Thailand</span></p>
+    <p data-i18n="buyer_note">Interested buyers are encouraged to reach out for further financial due diligence and site visits.</p>
+  </section>
+
+</div>
+
+<script>
+// Store default English text
+const defaultText = {};
+document.querySelectorAll('[data-i18n]').forEach(el => { defaultText[el.getAttribute('data-i18n')] = el.textContent; });
+
+// Full translations object
+const translations = {
+  "th": {
+    "company_name":"บริษัท Niwa Shoes จำกัด",
+    "proposal_title":"ข้อเสนอการขายธุรกิจ – กันยายน 2025",
+    "company_overview":"ภาพรวมบริษัท",
+    "company_desc":"บริษัท Niwa Shoes จำกัด เป็นบริษัทรองเท้าขนาดกลาง...",
+    "highlights":"ไฮไลท์",
+    "highlight1":"10+ ปีในธุรกิจรองเท้า",
+    "highlight2":"ขายส่ง + ขายปลีก + ออนไลน์",
+    "highlight3":"ฐานลูกค้าประจำ",
+    "ownership":"ความเป็นเจ้าของ",
+    "ownership_desc":"เป็นเจ้าของส่วนตัว, เปิดให้ซื้อได้...",
+    "financial_snapshot":"ภาพรวมการเงิน",
+    "revenue_title":"รายได้",
+    "revenue_value":"THB 2,000,000 / เดือน",
+    "profit_title":"กำไรสุทธิ",
+    "profit_value":"THB 300,000+ / เดือน",
+    "expenses_title":"ค่าใช้จ่ายหลัก",
+    "expenses_value":"ค่าเช่า, พนักงาน, การตลาด",
+    "category":"ประเภท",
+    "monthly_avg":"เฉลี่ยต่อเดือน",
+    "notes":"หมายเหตุ",
+    "revenue_row":"รายได้",
+    "profit_row":"กำไรสุทธิ",
+    "expenses_row":"ค่าใช้จ่าย",
+    "steady":"คงที่ใน 12 เดือนที่ผ่านมา",
+    "after_tax":"หลังหักภาษี",
+    "main_expenses":"หลักๆ คือค่าเช่า, เงินเดือน, การตลาด",
+    "market_position":"ตำแหน่งทางการตลาด",
+    "market_position_desc":"Niwa Shoes ให้บริการลูกค้าปลีกและขายส่ง...",
+    "product_gallery":"แกลเลอรี่สินค้า",
+    "store_gallery":"แกลเลอรี่ร้านและบูธ",
+    "conclusion":"สรุป",
+    "conclusion_desc":"Niwa Shoes เป็นโอกาสในการซื้อธุรกิจรองเท้าที่มั่นคงและมีกำไร...",
+    "contact":"ติดต่อ & ขั้นตอนต่อไป",
+    "company_label":"บริษัท:",
+    "company_value":"Niwa Shoes จำกัด",
+    "email_label":"อีเมล:",
+    "email_value":"info@niwashoeco.com",
+    "phone_label":"โทร:",
+    "phone_value":"+66 2 123 4567",
+    "address_label":"ที่อยู่:",
+    "address_value":"กรุงเทพฯ ประเทศไทย",
+    "buyer_note":"ผู้สนใจซื้อสามารถติดต่อเพื่อทำ due diligence และเยี่ยมชมสถานที่."
+  },
+  "zh": {
+    "company_name":"Niwa鞋业有限公司",
+    "proposal_title":"商业销售提案 – 2025年9月",
+    "company_overview":"公司概况",
+    "company_desc":"Niwa鞋业有限公司是一家中型鞋类公司...",
+    "highlights":"亮点",
+    "highlight1":"鞋类行业10年以上经验",
+    "highlight2":"批发 + 零售 + 在线销售渠道",
+    "highlight3":"稳定的回头客群",
+    "ownership":"所有权",
+    "ownership_desc":"私人拥有，现在开放收购...",
+    "financial_snapshot":"财务概况",
+    "revenue_title":"收入",
+    "revenue_value":"每月 THB 2,000,000",
+    "profit_title":"净利润",
+    "profit_value":"每月 THB 300,000+",
+    "expenses_title":"主要支出",
+    "expenses_value":"租金, 员工, 市场营销",
+    "category":"类别",
+    "monthly_avg":"月均",
+    "notes":"备注",
+    "revenue_row":"收入",
+    "profit_row":"净利润",
+    "expenses_row":"支出",
+    "steady":"过去12个月稳定",
+    "after_tax":"税后",
+    "main_expenses":"主要为租金、工资、市场营销",
+    "market_position":"市场定位",
+    "market_position_desc":"Niwa鞋业服务零售和批发客户...",
+    "product_gallery":"产品展示",
+    "store_gallery":"门店与展位展示",
+    "conclusion":"结论",
+    "conclusion_desc":"Niwa鞋业有限公司提供了收购稳定、盈利的机会...",
+    "contact":"联系方式 & 下一步",
+    "company_label":"公司:",
+    "company_value":"Niwa鞋业有限公司",
+    "email_label":"邮箱:",
+    "email_value":"info@niwashoeco.com",
+    "phone_label":"电话:",
+    "phone_value":"+66 2 123 4567",
+    "address_label":"地址:",
+    "address_value":"曼谷, 泰国",
+    "buyer_note":"有意购买者请联系以获取进一步的尽职调查。"
+  },
+  "ar": {
+    "company_name":"شركة نيوا للأحذية المحدودة",
+    "proposal_title":"عرض بيع الأعمال – سبتمبر 2025",
+    "company_overview":"نظرة عامة على الشركة",
+    "company_desc":"شركة نيوا للأحذية المحدودة هي شركة أحذية متوسطة الحجم...",
+    "highlights":"أهم النقاط",
+    "highlight1":"أكثر من 10 سنوات في صناعة الأحذية",
+    "highlight2":"قنوات البيع بالجملة + التجزئة + عبر الإنترنت",
+    "highlight3":"قاعدة عملاء ثابتة",
+    "ownership":"الملكية",
+    "ownership_desc":"مملوكة للقطاع الخاص، متاحة الآن للاستحواذ...",
+    "financial_snapshot":"ملخص مالي",
+    "revenue_title":"الإيرادات",
+    "revenue_value":"THB 2,000,000 / الشهر",
+    "profit_title":"صافي الربح",
+    "profit_value":"THB 300,000+ / الشهر",
+    "expenses_title":"المصاريف الرئيسية",
+    "expenses_value":"الإيجار، الموظفون، التسويق",
+    "category":"الفئة",
+    "monthly_avg":"متوسط شهري",
+    "notes":"ملاحظات",
+    "revenue_row":"الإيرادات",
+    "profit_row":"صافي الربح",
+    "expenses_row":"المصاريف",
+    "steady":"ثابتة خلال 12 شهرًا الماضية",
+    "after_tax":"بعد الضريبة",
+    "main_expenses":"أساساً الإيجار، الرواتب، التسويق",
+    "market_position":"موقع السوق",
+    "market_position_desc":"تخدم نيوا العملاء بالتجزئة والجملة...",
+    "product_gallery":"معرض المنتجات",
+    "store_gallery":"معرض المتاجر والأكشاك",
+    "conclusion":"الخلاصة",
+    "conclusion_desc":"شركة نيوا للأحذية فرصة نادرة للاستحواذ على عمل مربح ومستقر...",
+    "contact":"الاتصال & الخطوات التالية",
+    "company_label":"الشركة:",
+    "company_value":"شركة نيوا للأحذية المحدودة",
+    "email_label":"البريد الإلكتروني:",
+    "email_value":"info@niwashoeco.com",
+    "phone_label":"الهاتف:",
+    "phone_value":"+66 2 123 4567",
+    "address_label":"العنوان:",
+    "address_value":"بانكوك، تايلاند",
+    "buyer_note":"يُشجع المشترون المهتمون على التواصل."
+  },
+  "ru": {
+    "company_name":"Niwa Shoes Co., Ltd.",
+    "proposal_title":"Коммерческое предложение – Сентябрь 2025",
+    "company_overview":"Обзор компании",
+    "company_desc":"Niwa Shoes Co., Ltd. – компания среднего размера...",
+    "highlights":"Основные моменты",
+    "highlight1":"Более 10 лет в обувном бизнесе",
+    "highlight2":"Оптовые + розничные + онлайн-каналы продаж",
+    "highlight3":"Стабильная клиентская база",
+    "ownership":"Собственность",
+    "ownership_desc":"Частная собственность, доступна для приобретения...",
+    "financial_snapshot":"Финансовый обзор",
+    "revenue_title":"Выручка",
+    "revenue_value":"THB 2,000,000 / месяц",
+    "profit_title":"Чистая прибыль",
+    "profit_value":"THB 300,000+ / месяц",
+    "expenses_title":"Основные расходы",
+    "expenses_value":"Аренда, персонал, маркетинг",
+    "category":"Категория",
+    "monthly_avg":"Среднее в месяц",
+    "notes":"Примечания",
+    "revenue_row":"Выручка",
+    "profit_row":"Чистая прибыль",
+    "expenses_row":"Расходы",
+    "steady":"Стабильна за последние 12 месяцев",
+    "after_tax":"После налогообложения",
+    "main_expenses":"В основном аренда, зарплаты, маркетинг",
+    "market_position":"Позиция на рынке",
+    "market_position_desc":"Niwa Shoes обслуживает розничных и оптовых клиентов...",
+    "product_gallery":"Галерея продукции",
+    "store_gallery":"Галерея магазинов и киосков",
+    "conclusion":"Заключение",
+    "conclusion_desc":"Niwa Shoes Co., Ltd. представляет возможность приобрести стабильный бизнес...",
+    "contact":"Контакты & Дальнейшие шаги",
+    "company_label":"Компания:",
+    "company_value":"Niwa Shoes Co., Ltd.",
+    "email_label":"Электронная почта:",
+    "email_value":"info@niwashoeco.com",
+    "phone_label":"Телефон:",
+    "phone_value":"+66 2 123 4567",
+    "address_label":"Адрес:",
+    "address_value":"Бангкок, Таиланд",
+    "buyer_note":"Заинтересованным покупателям рекомендуется связаться."
+  }
+};
+
+// Translation function
+function translate(lang){
+  document.querySelectorAll('[data-i18n]').forEach(el=>{
+    const key = el.getAttribute('data-i18n');
+    el.textContent = translations[lang] && translations[lang][key] ? translations[lang][key] : defaultText[key];
+  });
+}
+
+// Language selector event
+document.getElementById('lang').addEventListener('change', e => translate(e.target.value));
+
+// Lightbox
+document.querySelectorAll('.gallery img').forEach(img=>{
+  img.addEventListener('click', ()=>{
+    const overlay = document.createElement('div');
+    overlay.className = 'lightbox';
+    overlay.innerHTML = `<img src="${img.src}" alt="${img.alt}">`;
+    document.body.appendChild(overlay);
+    overlay.addEventListener('click', ()=>overlay.remove());
+  });
+});
+</script>
+</body>
+</html>
