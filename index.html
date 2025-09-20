@@ -55,7 +55,7 @@
 
 .banner-wrapper {
   width: 100%;
-  height: 100%; /* banner height reduced */
+ height: 300px; /* fixed height to avoid gaps */
   margin-bottom: 20px;
   border: 2px solid #3498db; /* blue border */
   border-radius: 12px;
@@ -66,17 +66,16 @@
 .banner {
   width: 100%;
   height: 100%;
-  background: url('https://raw.githubusercontent.com/mnbarlas/niwashoes/refs/heads/main/Banner.png') center/cover no-repeat;
+  background: url('https://raw.githubusercontent.com/mnbarlas/niwashoes/refs/heads/main/Banner.png') center center / cover no-repeat;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  color: #2c3e50; /* changed text color for contrast */
-  text-shadow: 1px 1px 4px rgba(255,255,255,0.8); /* optional text shadow */
-  padding: 10px;
-  box-sizing: border-box;
-  text-align: center;
+  color: #fff;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.7);
+  position: relative;
 }
+
 
 
 
@@ -281,6 +280,7 @@
 </script>
 </body>
 </html>
+
 
 
 
