@@ -30,9 +30,9 @@
 /* Banner Wrapper */
 .banner-wrapper {
     width: 100%;
-    height: 300px;
+    height: 200px; /* reduced height for mobile-friendly view */
     margin-bottom: 20px;
-    border: 2px solid #3498db;
+    border: 1.5px solid #3498db; /* slightly thinner border */
     border-radius: 12px;
     overflow: hidden;
     position: relative;
@@ -71,7 +71,7 @@
     position: relative;
     z-index: 2;
     color: #fff;
-    font-size: 32px;
+    font-size: 28px; /* slightly smaller for smaller height */
     font-weight: bold;
     text-align: center;
     text-shadow: 
@@ -83,13 +83,13 @@
     animation: neonGlow 2s ease-in-out infinite alternate;
 }
 
-/* Subheading for “Business Sales Proposal” */
+/* Subheading */
 .banner p {
     position: relative;
     z-index: 2;
     color: #fff;
-    font-size: 20px;
-    margin-top: 10px;
+    font-size: 16px; /* smaller for mobile-friendly layout */
+    margin-top: 5px;
     text-shadow: 1px 1px 5px rgba(0,0,0,0.7);
 }
 
@@ -121,21 +121,19 @@
     }
 }
 
-/* Responsive adjustments */
+/* Responsive adjustments for very small screens */
 @media (max-width: 768px) {
+    .banner-wrapper {
+        height: 180px; /* smaller height on tablets/mobiles */
+        border-width: 1px;
+    }
     .banner h1 {
-        font-size: 24px;
+        font-size: 20px;
     }
     .banner p {
-        font-size: 16px;
+        font-size: 14px;
     }
 }
-
-
-
-
-
-
 
 
 
@@ -404,6 +402,7 @@ document.querySelectorAll('.gallery img').forEach(img=>{
 </script>
 </body>
 </html>
+
 
 
 
