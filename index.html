@@ -264,7 +264,7 @@
     <!-- Navigation arrows -->
     <div class="swiper-button-next"></div>
     <div class="swiper-button-prev"></div>
-    <!-- Pagination (optional) -->
+    <!-- Pagination -->
     <div class="swiper-pagination"></div>
   </div>
 </section>
@@ -274,9 +274,13 @@
 
 <script>
   const swiper = new Swiper(".mySwiper", {
-    slidesPerView: 2,        // number of slides visible
-    spaceBetween: 10,        // space between slides
-    loop: true,              // continuous loop
+    slidesPerView: 2,
+    spaceBetween: 15,
+    loop: true,
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
+    },
     pagination: {
       el: ".swiper-pagination",
       clickable: true,
@@ -286,21 +290,32 @@
       prevEl: ".swiper-button-prev",
     },
     breakpoints: {
-      480: { slidesPerView: 1 },  // 1 slide for small screens
-      768: { slidesPerView: 2 },  // 2 slides for tablets
-      1024: { slidesPerView: 4 }  // 4 slides for desktops
+      480: { slidesPerView: 1 },
+      768: { slidesPerView: 2 },
+      1024: { slidesPerView: 4 }
     }
   });
 </script>
 
 <style>
+/* Neon-style hover glow on images */
 .swiper-slide img {
   width: 100%;
   border-radius: 8px;
-  transition: transform 0.3s;
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 .swiper-slide img:hover {
   transform: scale(1.05);
+  box-shadow: 0 0 20px #00ffff, 0 0 40px #3498db;
+}
+
+/* Optional: adjust pagination bullets color */
+.swiper-pagination-bullet {
+  background: #3498db;
+  opacity: 0.8;
+}
+.swiper-pagination-bullet-active {
+  background: #00ffff;
 }
 </style>
 
@@ -452,6 +467,7 @@ document.querySelectorAll('.gallery img').forEach(img=>{
 </script>
 </body>
 </html>
+
 
 
 
