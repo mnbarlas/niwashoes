@@ -246,20 +246,55 @@
 <!-- Include Swiper CSS -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
 
+<!-- Include GLightbox CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
+
 <!-- Product Gallery -->
 <section>
   <h2 data-i18n="product_gallery">Product Gallery</h2>
   
   <div class="swiper mySwiper">
     <div class="swiper-wrapper">
-      <div class="swiper-slide"><img src="https://raw.githubusercontent.com/mnbarlas/niwashoes/refs/heads/main/Shoe1.jpg" alt="NIWA Shoe 1"></div>
-      <div class="swiper-slide"><img src="https://raw.githubusercontent.com/mnbarlas/niwashoes/refs/heads/main/Shoe2.jpg" alt="NIWA Shoe 2"></div>
-      <div class="swiper-slide"><img src="https://raw.githubusercontent.com/mnbarlas/niwashoes/refs/heads/main/Shoe3.jpg" alt="NIWA Shoe 3"></div>
-      <div class="swiper-slide"><img src="https://raw.githubusercontent.com/mnbarlas/niwashoes/refs/heads/main/Shoe4.jpg" alt="NIWA Shoe 4"></div>
-      <div class="swiper-slide"><img src="https://raw.githubusercontent.com/mnbarlas/niwashoes/refs/heads/main/Shoe5.jpg" alt="NIWA Shoe 5"></div>
-      <div class="swiper-slide"><img src="https://raw.githubusercontent.com/mnbarlas/niwashoes/refs/heads/main/Shoe6.jpg" alt="NIWA Shoe 6"></div>
-      <div class="swiper-slide"><img src="https://raw.githubusercontent.com/mnbarlas/niwashoes/refs/heads/main/Shoe7.jpg" alt="NIWA Shoe 7"></div>
-      <div class="swiper-slide"><img src="https://raw.githubusercontent.com/mnbarlas/niwashoes/refs/heads/main/Shoe8.jpg" alt="NIWA Shoe 8"></div>
+      <div class="swiper-slide">
+        <a href="https://raw.githubusercontent.com/mnbarlas/niwashoes/refs/heads/main/Shoe1.jpg" class="glightbox" data-glightbox="title: NIWA Shoe 1">
+          <img src="https://raw.githubusercontent.com/mnbarlas/niwashoes/refs/heads/main/Shoe1.jpg" alt="NIWA Shoe 1">
+        </a>
+      </div>
+      <div class="swiper-slide">
+        <a href="https://raw.githubusercontent.com/mnbarlas/niwashoes/refs/heads/main/Shoe2.jpg" class="glightbox" data-glightbox="title: NIWA Shoe 2">
+          <img src="https://raw.githubusercontent.com/mnbarlas/niwashoes/refs/heads/main/Shoe2.jpg" alt="NIWA Shoe 2">
+        </a>
+      </div>
+      <div class="swiper-slide">
+        <a href="https://raw.githubusercontent.com/mnbarlas/niwashoes/refs/heads/main/Shoe3.jpg" class="glightbox" data-glightbox="title: NIWA Shoe 3">
+          <img src="https://raw.githubusercontent.com/mnbarlas/niwashoes/refs/heads/main/Shoe3.jpg" alt="NIWA Shoe 3">
+        </a>
+      </div>
+      <div class="swiper-slide">
+        <a href="https://raw.githubusercontent.com/mnbarlas/niwashoes/refs/heads/main/Shoe4.jpg" class="glightbox" data-glightbox="title: NIWA Shoe 4">
+          <img src="https://raw.githubusercontent.com/mnbarlas/niwashoes/refs/heads/main/Shoe4.jpg" alt="NIWA Shoe 4">
+        </a>
+      </div>
+      <div class="swiper-slide">
+        <a href="https://raw.githubusercontent.com/mnbarlas/niwashoes/refs/heads/main/Shoe5.jpg" class="glightbox" data-glightbox="title: NIWA Shoe 5">
+          <img src="https://raw.githubusercontent.com/mnbarlas/niwashoes/refs/heads/main/Shoe5.jpg" alt="NIWA Shoe 5">
+        </a>
+      </div>
+      <div class="swiper-slide">
+        <a href="https://raw.githubusercontent.com/mnbarlas/niwashoes/refs/heads/main/Shoe6.jpg" class="glightbox" data-glightbox="title: NIWA Shoe 6">
+          <img src="https://raw.githubusercontent.com/mnbarlas/niwashoes/refs/heads/main/Shoe6.jpg" alt="NIWA Shoe 6">
+        </a>
+      </div>
+      <div class="swiper-slide">
+        <a href="https://raw.githubusercontent.com/mnbarlas/niwashoes/refs/heads/main/Shoe7.jpg" class="glightbox" data-glightbox="title: NIWA Shoe 7">
+          <img src="https://raw.githubusercontent.com/mnbarlas/niwashoes/refs/heads/main/Shoe7.jpg" alt="NIWA Shoe 7">
+        </a>
+      </div>
+      <div class="swiper-slide">
+        <a href="https://raw.githubusercontent.com/mnbarlas/niwashoes/refs/heads/main/Shoe8.jpg" class="glightbox" data-glightbox="title: NIWA Shoe 8">
+          <img src="https://raw.githubusercontent.com/mnbarlas/niwashoes/refs/heads/main/Shoe8.jpg" alt="NIWA Shoe 8">
+        </a>
+      </div>
     </div>
     <!-- Navigation arrows -->
     <div class="swiper-button-next"></div>
@@ -271,14 +306,17 @@
 
 <!-- Include Swiper JS -->
 <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+<!-- Include GLightbox JS -->
+<script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
 
 <script>
+  // Initialize Swiper
   const swiper = new Swiper(".mySwiper", {
     slidesPerView: 2,
     spaceBetween: 15,
     loop: true,
     autoplay: {
-      delay: 1500,
+      delay: 3000,
       disableOnInteraction: false,
     },
     pagination: {
@@ -295,6 +333,15 @@
       1024: { slidesPerView: 4 }
     }
   });
+
+  // Initialize GLightbox
+  const lightbox = GLightbox({
+    selector: '.glightbox',
+    loop: true,
+    zoomable: true,
+    openEffect: 'fade',
+    closeEffect: 'fade'
+  });
 </script>
 
 <style>
@@ -309,7 +356,7 @@
   box-shadow: 0 0 20px #00ffff, 0 0 40px #3498db;
 }
 
-/* Optional: adjust pagination bullets color */
+/* Pagination bullets color */
 .swiper-pagination-bullet {
   background: #3498db;
   opacity: 0.8;
@@ -318,7 +365,6 @@
   background: #00ffff;
 }
 </style>
-
 
 
 
@@ -467,6 +513,7 @@ document.querySelectorAll('.gallery img').forEach(img=>{
 </script>
 </body>
 </html>
+
 
 
 
