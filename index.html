@@ -30,9 +30,10 @@
 /* Banner Wrapper */
 .banner-wrapper {
     width: 100%;
-    height: 200px; /* reduced height for mobile-friendly view */
+    max-height: 350px; /* maximum height for large screens */
+    height: 25vw; /* dynamic height based on viewport width */
     margin-bottom: 20px;
-    border: 1.5px solid #3498db; /* slightly thinner border */
+    border: 1.5px solid #3498db;
     border-radius: 12px;
     overflow: hidden;
     position: relative;
@@ -71,7 +72,7 @@
     position: relative;
     z-index: 2;
     color: #fff;
-    font-size: 28px; /* slightly smaller for smaller height */
+    font-size: 4vw; /* dynamic font size relative to viewport */
     font-weight: bold;
     text-align: center;
     text-shadow: 
@@ -88,7 +89,7 @@
     position: relative;
     z-index: 2;
     color: #fff;
-    font-size: 16px; /* smaller for mobile-friendly layout */
+    font-size: 2vw; /* dynamic font size */
     margin-top: 5px;
     text-shadow: 1px 1px 5px rgba(0,0,0,0.7);
 }
@@ -121,21 +122,19 @@
     }
 }
 
-/* Responsive adjustments for very small screens */
-@media (max-width: 768px) {
+/* Responsive tweaks for very small screens */
+@media (max-width: 480px) {
     .banner-wrapper {
-        height: 180px; /* smaller height on tablets/mobiles */
+        height: 35vw; /* slightly taller for very small screens */
         border-width: 1px;
     }
     .banner h1 {
-        font-size: 20px;
+        font-size: 6vw;
     }
     .banner p {
-        font-size: 14px;
+        font-size: 3.5vw;
     }
 }
-
-
 
 
 
@@ -402,6 +401,7 @@ document.querySelectorAll('.gallery img').forEach(img=>{
 </script>
 </body>
 </html>
+
 
 
 
