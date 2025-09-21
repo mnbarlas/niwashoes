@@ -231,7 +231,7 @@
 
   <p><strong data-i18n="address_label">Address:</strong> <span data-i18n="address_value">Bangkok, Thailand</span></p>
 
-  <p data-i18n="buyer_note" style="font-weight: bold; color: #333; margin-top: 15px;">
+  <p data-i18n="buyer_note" class="buyer-note">
     Interested buyers are encouraged to reach out for further financial due diligence and site visits.
   </p>
 
@@ -256,6 +256,24 @@
     }
     .facebook-btn:hover {
       background-color: #145dbf;
+    }
+
+    /* Interactive buyer note */
+    .buyer-note {
+      background-color: #ffc107;
+      color: #333;
+      font-weight: bold;
+      padding: 15px;
+      border-radius: 8px;
+      text-align: center;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      margin-top: 15px;
+    }
+    .buyer-note:hover {
+      background-color: #e0a800;
+      transform: scale(1.05);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
     }
   </style>
 </section>
@@ -302,6 +320,7 @@ document.querySelectorAll('.gallery img').forEach(img=>{
 </script>
 </body>
 </html>
+
 
 
 
