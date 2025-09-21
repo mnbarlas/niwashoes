@@ -26,23 +26,23 @@
   .lightbox img{max-width:90%; max-height:90%; border-radius:10px;}
   .contact-box{background:#eaf2f8; padding:20px; border-radius:12px; margin-top:1.5rem;}
   @media(max-width:768px){.two-col{grid-template-columns:1fr;}.key-metrics{flex-direction:column;}}
-  /* Banner Wrapper */
-  .banner-wrapper { width: 100%; max-height: 350px; height: 25vw; margin-bottom: 20px; border: 1.5px solid #3498db; border-radius: 12px; overflow: hidden; position: relative;}
-  .banner { width: 100%; height: 100%; background: url('https://raw.githubusercontent.com/mnbarlas/niwashoes/refs/heads/main/Banner.png') center/cover no-repeat; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; position: relative; padding: 10px; box-sizing: border-box;}
-  .banner::before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.35); z-index: 1; border-radius: 12px;}
-  .banner h1 { position: relative; z-index: 2; color: #fff; font-size: 4vw; font-weight: bold; text-align: center; text-shadow: 0 0 5px #3498db,0 0 10px #3498db,0 0 20px #3498db,0 0 40px #00ffff,0 0 80px #00ffff; animation: neonGlow 2s ease-in-out infinite alternate;}
-  .banner p { position: relative; z-index: 2; color: #fff; font-size: 2vw; margin-top: 5px; text-shadow: 1px 1px 5px rgba(0,0,0,0.7);}
-  @keyframes neonGlow {0% {text-shadow:0 0 5px #3498db,0 0 10px #3498db,0 0 20px #3498db,0 0 40px #00ffff,0 0 80px #00ffff;}50% {text-shadow:0 0 10px #3498db,0 0 20px #3498db,0 0 30px #3498db,0 0 50px #00ffff,0 0 100px #00ffff;}100% {text-shadow:0 0 5px #3498db,0 0 10px #3498db,0 0 20px #3498db,0 0 40px #00ffff,0 0 80px #00ffff;}}
-  @media (max-width: 480px) {.banner-wrapper {height: 35vw; border-width: 1px;} .banner h1 {font-size: 6vw;} .banner p {font-size: 3.5vw;}}
-  .swiper-slide img {width:100%; border-radius:8px; transition: transform 0.3s, box-shadow 0.3s;}
-  .swiper-slide img:hover {transform: scale(1.05); box-shadow: 0 0 20px #00ffff, 0 0 40px #3498db;}
-  .swiper-pagination-bullet { background: #3498db; opacity: 0.8;}
-  .swiper-pagination-bullet-active { background: #00ffff;}
+
+  /* Banner */
+  .banner-wrapper {width:100%; max-height:350px; height:25vw; margin-bottom:20px; border:1.5px solid #3498db; border-radius:12px; overflow:hidden; position:relative;}
+  .banner {width:100%; height:100%; background:url('https://raw.githubusercontent.com/mnbarlas/niwashoes/refs/heads/main/Banner.png') center/cover no-repeat; display:flex; flex-direction:column; align-items:center; justify-content:center; text-align:center; position:relative; padding:10px; box-sizing:border-box;}
+  .banner::before {content:''; position:absolute; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.35); z-index:1; border-radius:12px;}
+  .banner h1 {position:relative; z-index:2; color:#fff; font-size:4vw; font-weight:bold; text-align:center; text-shadow:0 0 5px #3498db,0 0 10px #3498db,0 0 20px #3498db,0 0 40px #00ffff,0 0 80px #00ffff; animation:neonGlow 2s ease-in-out infinite alternate;}
+  .banner p {position:relative; z-index:2; color:#fff; font-size:2vw; margin-top:5px; text-shadow:1px 1px 5px rgba(0,0,0,0.7);}
+  @keyframes neonGlow {0% {text-shadow:0 0 5px #3498db,0 0 10px #3498db,0 0 20px #3498db,0 0 40px #00ffff,0 0 80px #00ffff;} 50% {text-shadow:0 0 10px #3498db,0 0 20px #3498db,0 0 30px #3498db,0 0 50px #00ffff,0 0 100px #00ffff;} 100% {text-shadow:0 0 5px #3498db,0 0 10px #3498db,0 0 20px #3498db,0 0 40px #00ffff,0 0 80px #00ffff;}}
+  @media (max-width:480px) {.banner-wrapper {height:35vw; border-width:1px;} .banner h1 {font-size:6vw;} .banner p {font-size:3.5vw;}}
 </style>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
 </head>
 <body>
 <div class="container">
-  <!-- Language selector -->
+
+  <!-- Language Selector -->
   <div class="language-selector">
     <label for="lang">Language:</label>
     <select id="lang">
@@ -63,7 +63,7 @@
   <section>
     <h2 data-i18n="company_overview">Company Overview</h2>
     <p data-i18n="company_desc">Niwa Shoes Co., Ltd. is an omni-channel women’s fashion footwear retailer and wholesaler headquartered in Bangkok. The company operates 30 retail outlets in premium shopping malls across Greater Bangkok, supported by a fully integrated e-commerce ecosystem (Shopee, Lazada, Facebook, Instagram, TikTok, and its own webstore), as well as a growing export network serving ASEAN markets.</p>
-    
+
     <div class="two-col">
       <div>
         <h3 data-i18n="highlights">Highlights</h3>
@@ -98,21 +98,9 @@
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <td data-i18n="revenue_row">Revenue</td>
-          <td>THB 2,000,000</td>
-          <td data-i18n="steady">Steady past 12 months</td>
-        </tr>
-        <tr>
-          <td data-i18n="profit_row">Net Profit</td>
-          <td>THB 300,000+</td>
-          <td data-i18n="after_tax">After tax</td>
-        </tr>
-        <tr>
-          <td data-i18n="expenses_row">Expenses</td>
-          <td>Variable</td>
-          <td data-i18n="main_expenses">Mainly rent, salaries, marketing</td>
-        </tr>
+        <tr><td data-i18n="revenue_row">Revenue</td><td>THB 2,000,000</td><td data-i18n="steady">Steady past 12 months</td></tr>
+        <tr><td data-i18n="profit_row">Net Profit</td><td>THB 300,000+</td><td data-i18n="after_tax">After tax</td></tr>
+        <tr><td data-i18n="expenses_row">Expenses</td><td>Variable</td><td data-i18n="main_expenses">Mainly rent, salaries, marketing</td></tr>
       </tbody>
     </table>
   </section>
@@ -128,7 +116,6 @@
     <h2 data-i18n="product_gallery">Product Gallery</h2>
     <div class="swiper mySwiper">
       <div class="swiper-wrapper">
-        <!-- 8 images -->
         <div class="swiper-slide"><a href="https://raw.githubusercontent.com/mnbarlas/niwashoes/refs/heads/main/Shoe1.jpg" class="glightbox"><img src="https://raw.githubusercontent.com/mnbarlas/niwashoes/refs/heads/main/Shoe1.jpg" alt="NIWA Shoe 1"></a></div>
         <div class="swiper-slide"><a href="https://raw.githubusercontent.com/mnbarlas/niwashoes/refs/heads/main/Shoe2.jpg" class="glightbox"><img src="https://raw.githubusercontent.com/mnbarlas/niwashoes/refs/heads/main/Shoe2.jpg" alt="NIWA Shoe 2"></a></div>
         <div class="swiper-slide"><a href="https://raw.githubusercontent.com/mnbarlas/niwashoes/refs/heads/main/Shoe3.jpg" class="glightbox"><img src="https://raw.githubusercontent.com/mnbarlas/niwashoes/refs/heads/main/Shoe3.jpg" alt="NIWA Shoe 3"></a></div>
@@ -167,10 +154,7 @@
     <p><strong data-i18n="company_label">Company:</strong> <span data-i18n="company_value">Niwa Shoes Co., Ltd.</span></p>
     <p><strong data-i18n="email_label">Email:</strong> <a href="mailto:auniwa@hotmail.com" data-i18n="email_value">auniwa@hotmail.com</a></p>
     <p><strong data-i18n="phone_label">Phone:</strong></p>
-    <div id="phone-container">
-      <a href="tel:+66629419615" class="phone-btn">+66 62 941 9615</a>
-      <a href="tel:+66616178954" class="phone-btn">+66 61 617 8954</a>
-    </div>
+    <div id="phone-container"></div>
     <p><strong data-i18n="facebook_label">Facebook:</strong> <a href="https://www.facebook.com/niwashoes/" target="_blank" data-i18n="facebook_value">Visit Niwa Shoes on Facebook</a></p>
     <p><strong data-i18n="address_label">Address:</strong> <span data-i18n="address_value">Bangkok, Thailand</span></p>
     <p data-i18n="buyer_note">Interested buyers are encouraged to reach out for further financial due diligence and site visits.</p>
@@ -178,29 +162,47 @@
 
 </div>
 
-<!-- JS Libraries -->
+<!-- Scripts -->
 <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
 
 <script>
-const defaultText = {};
-document.querySelectorAll('[data-i18n]').forEach(el=>{defaultText[el.getAttribute('data-i18n')]=el.textContent;});
+  // Swiper
+  const swiper = new Swiper(".mySwiper", {
+    slidesPerView:2, spaceBetween:15, loop:true,
+    autoplay:{delay:3000, disableOnInteraction:false},
+    pagination:{el:".swiper-pagination", clickable:true},
+    navigation:{nextEl:".swiper-button-next", prevEl:".swiper-button-prev"},
+    breakpoints:{480:{slidesPerView:1},768:{slidesPerView:2},1024:{slidesPerView:4}}
+  });
 
-const translations = {
-  en: { /* English translations omitted for brevity, same as before */ },
-  th: {
-    company_name: "บริษัท Niwa Shoes จำกัด",
-    proposal_title: "ข้อเสนอการขายธุรกิจ",
-    company_overview: "ภาพรวมบริษัท",
-    company_desc: "Niwa Shoes Co., Ltd. เป็นผู้ค้าปลีกและค้าส่งรองเท้าแฟชั่นสตรีแบบออมนิแชนเนล มีสำนักงานใหญ่ตั้งอยู่ในกรุงเทพฯ บริษัทดำเนินงานร้านค้าปลีก 30 แห่งในห้างสรรพสินค้าระดับพรีเมียมทั่วกรุงเทพฯ และปริมณฑล โดยได้รับการสนับสนุนจากระบบอีคอมเมิร์ซแบบครบวงจร (Shopee, Lazada, Facebook, Instagram, TikTok และเว็บสโตร์ของบริษัทเอง) รวมถึงเครือข่ายส่งออกที่กำลังเติบโตเพื่อให้บริการตลาดอาเซียน",
-    highlights: "ไฮไลท์",
-    highlight1: "5+ ปีในธุรกิจรองเท้า",
-    highlight2: "ขายส่ง + ขายปลีก + ออนไลน์",
-    highlight3: "ฐานลูกค้าประจำ",
-    ownership: "ความเป็นเจ้าของ",
-    ownership_desc: "เป็นเจ้าของส่วนตัว, เปิดให้ซื้อได้...",
-    financial_snapshot: "ภาพรวมการเงิน",
-    revenue_title: "รายได้",
-    revenue_value: "THB 2,000,000 / เดือน",
-    registered_capital: "1,000,000",
-    profit_title: "
+  // GLightbox
+  const lightbox = GLightbox({selector:'.glightbox', loop:true, zoomable:true, openEffect:'fade', closeEffect:'fade'});
+
+  // Gallery Lightbox for store images
+  document.querySelectorAll('.gallery img').forEach(img=>{
+    img.addEventListener('click',()=>{const overlay=document.createElement('div'); overlay.className='lightbox'; overlay.innerHTML=`<img src="${img.src}" alt="${img.alt}">`; document.body.appendChild(overlay); overlay.addEventListener('click',()=>overlay.remove());});
+  });
+
+  // Translation
+  const defaultText={};
+  document.querySelectorAll('[data-i18n]').forEach(el=>{defaultText[el.getAttribute('data-i18n')]=el.textContent;});
+  const translations={
+    en:{company_name:"Niwa Shoes Co., Ltd.",proposal_title:"Business Sales Proposal",company_overview:"Company Overview",company_desc:"Niwa Shoes Co., Ltd. is a mid-sized footwear company...",highlights:"Highlights",highlight1:"5+ years in footwear business",highlight2:"Wholesale + retail + online sales channels",highlight3:"Consistent customer base with repeat orders",ownership:"Ownership",ownership_desc:"Privately owned, now open for acquisition...",financial_snapshot:"Financial Snapshot",revenue_title:"Revenue",revenue_value:"THB 2,000,000 / Month",registered_capital:"1,000,000",profit_title:"Net Profit",profit_value:"THB 300,000+ / Month",expenses_title:"Major Expenses",expenses_value:"Rent, Staff, Marketing",category:"Category",monthly_avg:"Monthly Avg",notes:"Notes",revenue_row:"Revenue",profit_row:"Net Profit",expenses_row:"Expenses",steady:"Steady past 12 months",after_tax:"After tax",main_expenses:"Mainly rent, salaries, marketing",market_position:"Market Position",market_position_desc:"Niwa Shoes serves both retail and wholesale clients...",product_gallery:"Product Gallery",store_gallery:"Store & Booth Gallery",conclusion:"Conclusion",conclusion_desc:"Niwa Shoes Co., Ltd. offers a rare chance to acquire...",contact:"Contact & Next Steps",company_label:"Company:",company_value:"Niwa Shoes Co., Ltd.",email_label:"Email:",email_value:"auniwa@hotmail.com",phone_label:"Phone:",facebook_label:"Facebook:",facebook_value:"Visit Niwa Shoes on Facebook",address_label:"Address:",address_value:"Bangkok, Thailand",buyer_note:"Interested buyers are encouraged to reach out for further financial due diligence and site visits."},
+    th:{company_name:"บริษัท นิววา ชูส์ จำกัด",proposal_title:"ข้อเสนอการขายธุรกิจ",company_overview:"ภาพรวมบริษัท",company_desc:"บริษัท นิววา ชูส์ จำกัด เป็นผู้จำหน่ายรองเท้าผู้หญิงในกรุงเทพ...",highlights:"ไฮไลท์",highlight1:"ดำเนินธุรกิจรองเท้ามากกว่า 5 ปี",highlight2:"ช่องทางขายค้าปลีก, ส่ง และออนไลน์",highlight3:"ฐานลูกค้าประจำและซ้ำสั่งซื้อ",ownership:"เจ้าของ",ownership_desc:"บริษัทเอกชน เปิดโอกาสขาย...",financial_snapshot:"ข้อมูลทางการเงิน",revenue_title:"รายได้",revenue_value:"2,000,000 บาท / เดือน",registered_capital:"1,000,000",profit_title:"กำไรสุทธิ",profit_value:"300,000+ บาท / เดือน",expenses_title:"ค่าใช้จ่ายหลัก",expenses_value:"ค่าเช่า, พนักงาน, การตลาด",category:"หมวดหมู่",monthly_avg:"เฉลี่ยต่อเดือน",notes:"หมายเหตุ",revenue_row:"รายได้",profit_row:"กำไรสุทธิ",expenses_row:"ค่าใช้จ่าย",steady:"คงที่ 12 เดือนที่ผ่านมา",after_tax:"หลังหักภาษี",main_expenses:"ส่วนใหญ่ค่าเช่า, เงินเดือน, การตลาด",market_position:"สถานะตลาด",market_position_desc:"บริษัท นิววา ชูส์ ให้บริการทั้งค้าปลีกและส่ง...",product_gallery:"แกลเลอรีสินค้า",store_gallery:"แกลเลอรีร้านและบูธ",conclusion:"สรุป",conclusion_desc:"บริษัท นิววา ชูส์ จำกัด เสนอโอกาสที่หาได้ยากในการซื้อธุรกิจ...",contact:"ติดต่อ & ขั้นตอนต่อไป",company_label:"บริษัท:",company_value:"บริษัท นิววา ชูส์ จำกัด",email_label:"อีเมล:",email_value:"auniwa@hotmail.com",phone_label:"โทร:",facebook_label:"Facebook:",facebook_value:"เยี่ยมชม Niwa Shoes บน Facebook",address_label:"ที่อยู่:",address_value:"กรุงเทพฯ ประเทศไทย",buyer_note:"ผู้สนใจซื้อควรติดต่อเพื่อดูข้อมูลเพิ่มเติมและตรวจสอบหน้างาน."}
+  };
+
+  document.getElementById('lang').addEventListener('change', e=>{
+    const lang=e.target.value;
+    document.querySelectorAll('[data-i18n]').forEach(el=>{
+      el.textContent=translations[lang][el.getAttribute('data-i18n')] || defaultText[el.getAttribute('data-i18n')];
+    });
+  });
+
+  // Phone numbers
+  const phoneContainer=document.getElementById('phone-container');
+  const phones=["062-9419615","061-6178954"];
+  phones.forEach(p=>{const a=document.createElement('a'); a.href=`tel:${p}`; a.textContent=p; a.style.display='block'; phoneContainer.appendChild(a);});
+</script>
+</body>
+</html>
